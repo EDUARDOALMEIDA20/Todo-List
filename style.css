@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+  outline: none;
+}
+
+body {
+  background-image: url("/img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container principal */
+.container {
+  background: #d1d1d1;
+  max-width: 500px;   /* limite máximo */
+  width: 90%;         /* ocupa até 90% da tela no mobile */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 100px auto 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Input e botão */
+.input-task {
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  height: 50px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.button-add-task {
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #028a0f; /* verde mais vibrante */
+  color: #fff;
+  font-size: 17px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.2s;
+}
+
+.button-add-task:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+.button-add-task:active {
+  opacity: 0.7;
+  transform: scale(0.97);
+}
+
+/* Lista de tarefas */
+.list-tasks {
+  width: 100%;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.task {
+  background-color: #f2f2f2;
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.task:hover {
+  background-color: #e8e8e8;
+}
+
+img {
+  height: 25px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.task:hover img {
+  opacity: 1;
+}
+
+.done {
+  background-color: #8fac55;
+  text-decoration: line-through;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===================== */
+/* 📱 Responsividade */
+/* ===================== */
+@media (max-width: 600px) {
+  .container {
+    margin: 50px auto 20px;
+    padding: 15px;
+  }
+
+  .input-task, 
+  .button-add-task {
+    width: 100%;
+    margin: 5px 0;
+    display: block;
+  }
+
+  .button-add-task {
+    height: 45px;
+  }
+}
+
+
+
